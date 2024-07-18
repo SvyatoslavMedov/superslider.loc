@@ -12,17 +12,16 @@
 
 .modal__title {
 	color: #fff;
-	text-transform: uppercase;
 	font-family: oswald-vh, sans-serif;
+	text-transform: uppercase;
 	font-weight: 400;
-	display: block;
-	width: 100%;
 }
 
 .modal__close {
 	color: #fff;
-	opacity: 0.25;
+	opacity: .25;
 	transition: opacity .25s ease-in;
+	z-index: 20;
 	&:hover {
 		opacity: 1;
 	}
@@ -32,10 +31,39 @@
 	text-align: center;
 }
 
-.modal__input {
-	margin-bottom: 8px;
+.modal__title {
+	display: block;
+	width: 100%;
 }
 
 .modal__footer {
 	text-align: center;
+}
+
+.modal__input {
+	margin-bottom: 8px;
+}
+
+.popup-form-alert {
+	.alert {
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $deep;
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	button {
+		display: none;
+	}
+	p {
+		padding: 20px;
+		text-align: center;
+		
+	}
 }

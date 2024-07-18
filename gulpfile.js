@@ -75,16 +75,17 @@ function scripts() {
 
 function styles() {
 	return src([`themes/${theme}/assets/styles/${preprocessor}/theme.*`, `!themes/${theme}/assets/styles/${preprocessor}/_*.*`])
-		.pipe(eval(`${preprocessor}glob`)())
-		.pipe(eval(preprocessor)({ 'include css': true }))
-		.pipe(postCss([
-			autoprefixer({ grid: 'autoplace' }),
-			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
-		]))
-		.pipe(concat('theme.min.css'))
-		.pipe(dest(`themes/${theme}/assets/css`))
-		.pipe(browserSync.stream())
-}
+	  .pipe(sassglob())
+	  .pipe(sass({ 'include css': true }).on('error', sass.logError))
+	  .pipe(postCss([
+		autoprefixer({ grid: 'autoplace' }),
+		cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
+	  ]))
+	  .pipe(concat('theme.min.css'))
+	  .pipe(dest(`themes/${theme}/assets/css`))
+	  .pipe(browserSync.stream());
+  }
+  
 
 function deploy() {
 	return src('./')
