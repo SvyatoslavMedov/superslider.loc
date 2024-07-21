@@ -1,5 +1,36 @@
-name: 'My Theme'
+name: 'Superslider'
 description: 'My Theme Description'
 author: ''
 homepage: ''
 code: ''
+
+
+form:
+    tabs:
+        fields:
+            logo_text: 
+                label: Компания
+                span: auto
+                comment: Введите название вашей компании  
+                tab: Основные
+            logo_image: 
+                label: Логотип
+                type: mediafinder
+                mode: image    
+                tab: Основные
+                span: auto
+            phone:
+                label: Адрес
+                span: auto
+                tab: Основные 
+            address:
+                label: Телефон
+                span: auto
+                tab: Основные         
+            landing_1_title:
+                label: title лендинга
+                tab: Лендинг "Вездеход" 
+            landing_1_description:
+                label: description лендинга
+                tab: Лендинг "Вездеход"   
+                type: textarea     

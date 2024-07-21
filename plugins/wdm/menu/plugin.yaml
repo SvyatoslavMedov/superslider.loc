@@ -1,0 +1,11 @@
+plugin:
+    name: 'wdm.menu::lang.plugin.name'
+    description: 'wdm.menu::lang.plugin.description'
+    author: WDM
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Лендинг
+        url: cms/themeoptions/update/superslider
+        icon: icon-briefcase

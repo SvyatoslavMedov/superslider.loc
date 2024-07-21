@@ -1,0 +1,6 @@
+plugin:
+    name: 'msi.menu::lang.plugin.name'
+    description: 'msi.menu::lang.plugin.description'
+    author: MSI
+    icon: oc-icon-adjust
+    homepage: ''
